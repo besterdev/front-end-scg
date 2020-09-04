@@ -1,32 +1,45 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+    <Header />
+    <Footer />
   </div>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Ubuntu", sans-serif;
 }
 
-#nav {
-  padding: 30px;
+html {
+  scroll-behavior: smooth;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+::selection {
+  background-color: #48dbfb60;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #353b48;
 }
 </style>
+
+<script>
+import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
+export default {
+  name: "Home",
+  components: {
+    Header,
+    Footer,
+  },
+};
+</script>
